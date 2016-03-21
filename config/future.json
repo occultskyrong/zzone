@@ -1,0 +1,14 @@
+{
+  "info": [
+    {
+      "info": "文档说明",
+      "index": "索引关键词，用于标记唯一性"
+    }
+  ],
+  "technology": [
+    {
+      "index": "logStash"
+    }
+  ],
+  "key_word": []
+}
