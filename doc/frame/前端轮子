@@ -1,0 +1,56 @@
+##  整体框架调用表
+***
+###### 以下内容使用markdown语法进行编辑
+***
+### 0. 编码规范
+ > [bootstrap编码规范](http://codeguide.bootcss.com/#html-syntax)
+
+### 1. 使用bootstrap的定制版
+ > 定制内容参见 [定制并下载 Bootstrap](http://v3.bootcss.com/customize/)
+##### 使用的组件：
+ * Grid system  [栅格系统](http://v3.bootcss.com/css/#grid)
+ * Typography   [排版](http://v3.bootcss.com/css/#type)
+ * Forms        [表单](http://v3.bootcss.com/css/#forms)
+ * Panels       [面板](http://v3.bootcss.com/components/#panels)
+ * Modals.js    [模态框](http://v3.bootcss.com/javascript/#modals)
+ * Collapse.js  [折叠](http://v3.bootcss.com/javascript/#collapse)
+ * Tabs.js      [标签页](http://v3.bootcss.com/javascript/#tabs)
+
+##### 参照的组件:
+ * Tables [表格] 参考[bs中tables的sass源码](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_tables.scss)的语法
+    > 参见[bs中tables说明](http://v3.bootcss.com/css/#tables) 状态类、鼠标悬停、响应式表格、紧缩表格的效果
+ * Buttons [按钮] 参考[bs中buttons的sass源码](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_buttons.scss)的结构和代码
+    > 参见[bs中buttons效果说明](http://v3.bootcss.com/css/#buttons)
+ * [辅助类] 暂未找到全部的辅助类，需要将less的mixin转到sass中
+    > 参见[bs中辅助类效果](http://v3.bootcss.com/css/#helper-classes)
+ * Pagination [分页] 参考[bs中pagination的sass源码](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_pagination.scss)
+    > 参见[bs中pagination效果](http://v3.bootcss.com/components/?#pagination),注意禁用状态的显示
+ * Labels [标签] 参考[bs中labels的sass源码](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_labels.scss)
+    > 参见[bs中labels效果](http://v3.bootcss.com/components/?#labels)
+ * Badges [徽章] 参考[bs中badges的sass源码](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_badges.scss)
+    > 参见[bs中badges效果](http://v3.bootcss.com/components/?#badges)
+ * Popovers [弹出框](http://v3.bootcss.com/javascript/#popovers)
+##### 分辨率相关：
+ * Responsive utilities[响应式工具] 参考[bs中responsive utilities的sass源码](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_responsive-utilities.scss)的结构
+    > 参见[bs中响应式效果](http://v3.bootcss.com/css/#responsive-utilities)
+ * Thumbnails [缩略图](http://v3.bootcss.com/components/?#thumbnails)
+
+
+### 2. scss file watcher的配置
+#### 2.1 [Arguments]
+    --no-cache --style compact --update $FileName$:$ProjectFileDir$\public\stylesheets\css\$FileDirPathFromParent(scss)$$FileNameWithoutExtension$.css
+
+#### 2.2 [Output paths to refresh]
+    $ProjectFileDir$\public\stylesheets\css\$FileDirPathFromParent(scss)$$FileNameWithoutExtension$.css
+
+### 3. 其他调用的插件
+##### 3.0 参照插件
+  * [Lodash](http://lodashjs.com/docs/) 可以用来做前端认证
+  * [Underscore.js](http://www.bootcss.com/p/underscore/) 可以用来做前端认证
+  * [sco.countdown.js](http://www.bootcss.com/p/sco.js/#countdown) [源代码](https://github.com/terebentina/sco.js/blob/master/js/sco.countdown.js)
+
+##### 3.1 增强复选框和单选按钮     [iCheck](http://www.bootcss.com/p/icheck/)
+##### 3.2 日期+时间选择插件        [dateTimePicker](http://www.bootcss.com/p/bootstrap-datetimepicker/)
+##### 3.3 增强轮播插件             [swiper](http://www.swiper.com.cn/demo/index.html)
+##### 3.4 抛物线插件               [fly](https://github.com/amibug/fly)   (加入购物车效果)
+
