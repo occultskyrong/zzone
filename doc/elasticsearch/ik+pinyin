@@ -1,0 +1,4 @@
+
+使用elasticsearch作为商品数据库时，通过使用es的pinyin和ik插件完成建议和搜索的任务
+
+
