@@ -13,7 +13,7 @@
 
 ### 1.3 书签(各种转,感谢[知乎](http://www.zhihu.com))
 
- > 独立成文，见[书签](https://github.com/occultskyrong/zzone/tree/master/doc/1.3_bookmark)
+ > 独立成文，见[书签](https://github.com/occultskyrong/zzone/blob/master/doc/1.3_bookmark/index.md)
 
 ### 1.4 个人小结
 
