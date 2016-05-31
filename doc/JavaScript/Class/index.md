@@ -10,15 +10,15 @@
 
 #### 1.0.1 动态化参数传递
 
-##### 根据参数obj中key值的不同，获取不同的实例，具体参见[动态化参数传递](https://github.com/occultskyrong/zzone/blob/master/doc/JavaScript/Class/1.0.1_dynamic_parameters.js)
+###### 根据参数obj中key值的不同，获取不同的实例，具体参见[动态化参数传递](https://github.com/occultskyrong/zzone/blob/master/doc/JavaScript/Class/1.0.1_dynamic_parameters.js)
 
 #### 1.0.2 可配置式动态化参数筛选
 
-##### 根据keys的配置，来筛选所需的参数，具体参见[可配置式动态化参数传递](https://github.com/occultskyrong/zzone/blob/master/doc/JavaScript/Class/1.0.2_dynamic_parameters_option.js)
+###### 根据keys的配置，来筛选所需的参数，具体参见[可配置式动态化参数传递](https://github.com/occultskyrong/zzone/blob/master/doc/JavaScript/Class/1.0.2_dynamic_parameters_option.js)
 
 #### 1.0.3 含变更、可配置式动态化参数筛选
 
-##### 有时候后端返回的参数需要进行一些转换，或者多个api返回的接口所包含的相同意义的key是不同名的，需要统一key的名称
- ```//todo 缺少实例
+###### 有时候后端返回的参数需要进行一些转换，或者多个api返回的接口所包含的相同意义的key是不同名的，需要统一key的名称
+ ```//todo 缺少实例```
  
  > 根据以上，需求的是对后端api返回的数据结构进行可配置式的动态重构。
