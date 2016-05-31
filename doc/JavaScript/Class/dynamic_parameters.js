@@ -11,32 +11,37 @@ var Good = function (_) {
     if (_ && typeof _ === 'object' && Object.keys(_).length > 0) {
         for (var i in _) {
             if (_.hasOwnProperty(i)) {
-                set(i, _[i]);
+                that[i] = _[i];
             }
         }
     }
-    //写入参数
-    function set(key, val) {
-        that[key] = val;
-    }
+};
+//计算总价
+Good.prototype.sum = function () {
+    return parseFloat(parseFloat((this.amount || 0) * (this.price || 0)).toFixed(2));
 };
 
-Good.prototype.getName = function () {
-    return this.name;
-};
-
-//传入两个不同的实例进行对象构建
 var good1 = new Good({
     name: '雪碧'
     , unit: '箱'
     , price: 125.00
+    , amount: 0
+    , info: '雪碧很好喝'
 });
 
 var good2 = new Good({
-    name: '雪碧2'
+    name: '可口可乐'
     , unit: '箱'
+    , price: 10
+    , amount: 0
     , productTime: '2016-5-31'
 });
 
-console.info(good1, good1.getName());
-console.info(good2, good2.getName());
+good1.name = '哈哈哈';
+console.info(good1, good1.name);
+
+console.info(good2, good2.sum());
+good2.amount = 1.15645231;//改变数量
+console.info(good2, good2.sum());
+good2.price = 12.13651;//改变价格
+console.info(good2, good2.sum());
