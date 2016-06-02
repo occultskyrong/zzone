@@ -22,3 +22,5 @@
  ```//todo 缺少实例```
  
  > 根据以上，需求的是对后端api返回的数据结构进行可配置式的动态重构。
+
+#### 1.0.4 [动态调用方法](https://github.com/occultskyrong/zzone/blob/master/doc/JavaScript/Class/1.0.4_dynamic_function)
