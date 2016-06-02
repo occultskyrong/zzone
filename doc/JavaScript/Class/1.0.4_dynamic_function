@@ -1,0 +1,48 @@
+/**
+ * Created by zrz on 2016/6/2.
+ * @version 1.0.0 created 动态调用方法
+ */
+
+"use strict";
+
+//可用于延迟加载，根据页面dom中存放的标记来调用对应的js方法
+
+var Obj = (function () {
+    //
+    var run = function (fun) {
+        console.info('--- 调用 ：', fun);
+        console.info('- 是否有该方法定义：',this[fun] instanceof Function, typeof this[fun]);
+        if (fun in this && this[fun] instanceof Function) {//判断是否有该方法
+            return this[fun]();//调用fun对应方法
+        } else {
+            return '无';
+        }
+    };
+    var init = function () {
+        return this.first();
+    };
+    var first = function () {
+        console.info('--- 调用 first');
+        return 'first';
+    };
+    var second = function () {
+        console.info('--- 调用 second');
+        return 'second';
+    };
+    return {
+        first: first
+        , second: second
+        , run: run
+        , init: init
+    }
+}());
+
+console.info('当前调用的方法：', Obj.run('first'));
+
+console.info('\n');
+
+console.info('当前调用的方法：', Obj.init());
+
+console.info('\n');
+
+console.info('当前调用的方法：', Obj.run('third'));
