@@ -7,7 +7,7 @@
 
 ### 0.3 书签(各种转,感谢[知乎](http://www.zhihu.com))
 
- > 独立成文，见[书签](https://github.com/occultskyrong/zzone/blob/master/doc/0.3_bookmark/index.md)
+ > 独立成文，见[书签](https://github.com/occultskyrong/zzone/blob/master/doc/0.3_bookmark/README.md)
 
 ## 1. 前端
 
