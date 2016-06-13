@@ -27,11 +27,11 @@
 
 ### 3.0 es学习
 #### 3.0.1 mapping
-* [Mapping parameters](https://github.com/occultskyrong/zzone/blob/master/doc/ElasticSearch/mapping/mapping.md)
+* [Mapping parameters](https://github.com/occultskyrong/zzone/blob/master/doc/3.0_ElasticSearch/mapping/mapping.md)
 
 ### 3.1 实战
 
 ### 3.2 思考
 
-#### 3.2.0  [拼音建议和关键词搜索的实现](https://github.com/occultskyrong/zzone/blob/master/doc/ElasticSearch/ik%2Bpinyin.md)
+#### 3.2.0  [拼音建议和关键词搜索的实现](https://github.com/occultskyrong/zzone/blob/master/doc/3.0_ElasticSearch/ik%2Bpinyin.md)
 
