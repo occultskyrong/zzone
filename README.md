@@ -23,7 +23,7 @@
 
 ## 2. NodeJs
 
-## 3. [ELasticSearch](./3.0_ElasticSearch)
+## 3. [ELasticSearch](./doc/3.0_ElasticSearch)
 
 ### 3.1 实战
 
