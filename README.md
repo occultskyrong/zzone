@@ -26,8 +26,6 @@
 ## 3. ELasticSearch
 
 ### 3.0 es学习
-#### 3.0.1 mapping
-* [Mapping parameters](https://github.com/occultskyrong/zzone/blob/master/doc/3.0_ElasticSearch/mapping/mapping.md)
 
 ### 3.1 实战
 
