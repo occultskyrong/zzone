@@ -10,7 +10,7 @@
 
 #### 1.0.1 动态化参数传递
 
-###### 根据参数obj中key值的不同，获取不同的实例，具体参见[动态化参数传递](https://github.com/occultskyrong/zzone/blob/master/doc/JavaScript/Class/1.0.1_dynamic_parameters.js)
+###### 根据参数obj中key值的不同，获取不同的实例，具体参见[动态化参数传递](./1.0.1_dynamic_parameters.js)
 
 #### 1.0.2 可配置式动态化参数筛选
 
