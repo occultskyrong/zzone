@@ -1,0 +1,65 @@
+
+
+
+## 杭州ES大会
+
+### 优点
+* 数据实时统计
+* 数据聚合
+
+### 搜索
+* 电商对搜索的需求
+	* 权重性
+	* 大数据，大规模索引创建
+	* 准确性
+	* 实时性、可靠性
+* 高级搜索
+	* AdvancedSearch
+* es反向代理 
+* 评分系统：静态分*动态分
+	* 归一化
+* 商品去重
+	* searcher rontine
+	* all pair similarity  
+
+### 数据同步
+* 同写同读
+* 定时同步
+* elastic-hadoop
+* river --> elasticsearch-jbdc
+
+### 数据存储、索引
+* es只存索引
+* alias 全量索引、索引更新build、重建，four dc
+* double-buffer 索引
+* 文档嵌套层次不宜太多，否则适度ETL
+* rolling
+* filtered query
+* bitmap、倒排索引
+* ip:logstash guip
+
+### 上下游
+* 监控es自身并发性能
+* 监控流量层
+
+### 数据聚合 agg
+* - 数据聚合做不到100%的准确
+* terms agg 分片分桶聚合的交叉合并
+	* 多个桶top 5的合并	
+* histogram agg 分时聚合
+* top hits agg 
+* 聚合分页
+
+### 坑
+* 脑裂问题?
+* 设置最大文件数、线程数
+* 数据更新
+	* _id path
+* 无权限控制：security，需付费插件
+* es部署在云上可能出问题
+
+	
+### 备份 	
+* 增量备份
+* 压缩备份
+* 定时备份
