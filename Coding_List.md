@@ -9,10 +9,10 @@
 
 ##### 1.1 原生对象/类的扩展
 ###### 1.1.1 Date
-    * ~~new Date().format()的扩展~~ 
-    * 获取两个月份时间段之间所有月份
-    * 通过标记获取某个特定日期
-    * datetimepicker.js的封装
+* ~~new Date().format()的扩展~~ 
+* 获取两个月份时间段之间所有月份
+* 通过标记获取某个特定日期
+* datetimepicker.js的封装
 ###### 1.1.2 Array
     * sort排序的扩展：多key排序 
 ###### 1.1.3 cookie
