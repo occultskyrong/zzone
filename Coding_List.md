@@ -7,7 +7,7 @@
     * class A 和 class B ，B继承自A，数据的初始化
   
   * 1.1 时间类的封装
-    * ~~ new Date().format()的扩展 ~~ 
+    * ~~new Date().format()的扩展~~ 
     * 获取两个月份时间段之间所有月份
     * 通过标记获取某个特定日期
     * datetimepicker.js的封装
