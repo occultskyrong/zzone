@@ -12,7 +12,7 @@
 
 #### 2.1 第一步中：用户输入的拼音，无论中间是否有空格，后端是不考虑的，后端只考虑用户输入的拼音或者内容在后端数据库中匹配的程度，也不考虑分词的概念，只不过是把用户输入的内容在后端数据库用like或者split，即string的切分（拼音根据中文对应拼音来切分）来进行判断。
 
-* 举个栗子：jd中输入'nxxxx'，给出的结果中（如下图），有"男鞋 休闲鞋"这种中间进行了空格分隔的关键词。![nxxxx的建议](https://raw.githubusercontent.com/occultskyrong/zzone/master/doc/3.0_ElasticSearch/images/mdwss.png)
+* 举个栗子：jd中输入'nxxxx'，给出的结果中（如下图），有"男鞋 休闲鞋"这种中间进行了空格分隔的关键词。![nxxxx的建议](https://raw.githubusercontent.com/occultskyrong/zzone/master/doc/3.0_ElasticSearch/images/nxxxx.png)
  
 * 而'md wss'这种中间有空格来间隔的，反而结果中是连续的。![md wss的建议](https://github.com/occultskyrong/zzone/blob/master/doc/3.0_ElasticSearch/images/mdwss.png?raw=true)
  
