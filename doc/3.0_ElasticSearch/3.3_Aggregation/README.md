@@ -5,7 +5,7 @@
   * [How to get an Elasticsearch aggregation with multiple fields](http://stackoverflow.com/questions/30728583/how-to-get-an-elasticsearch-aggregation-with-multiple-fields#)
 
 ```
-body: {
+"body": {
         "aggs": {
           "resolution": {//分辨率，多字段聚合:sw+sh
               "terms": {
@@ -29,12 +29,12 @@ body: {
 ##### 3.3.3 查询后聚合
   * [过滤查询以及聚合](http://blog.csdn.net/dm_vincent/article/details/42757519)
 ```
-body: {
+"body": {
         "query": {//先查询
             "filtered": {
-                query: {
-                    "match": {
-                        date: "2016-07-01"
+                "query": {
+                    "term": {
+                        "date": "2016-07-01"
                     }
                 }
             }
@@ -54,7 +54,7 @@ body: {
   * [Filter Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-filter-aggregation.html)
   
 ```
-  body: {
+  "body": {
         "aggs": {//先聚合
             "user": {
                 "filter": {//后过滤
