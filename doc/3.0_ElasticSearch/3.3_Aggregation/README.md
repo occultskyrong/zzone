@@ -34,7 +34,8 @@ body: {
 
 ##### 3.3.4 聚合后过滤
   * [Filter Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-filter-aggregation.html)
-  ```
+  
+```
   body: {
         "aggs": {//先聚合
             "user": {
@@ -53,4 +54,4 @@ body: {
             }
         }
     }
-  ```
+```
