@@ -6,20 +6,20 @@
 
 ```
 body: {
-            "aggs": {
-                "resolution": {//分辨率，多字段聚合:sw+sh
-                    "terms": {
-                        "field": "sw"
-                    }, "aggs": {
-                        "resolution": {
-                            "terms": {
-                                "field": "sh"
-                            }
+        "aggs": {
+          "resolution": {//分辨率，多字段聚合:sw+sh
+              "terms": {
+                "field": "sw"
+              }, "aggs": {
+                    "resolution": {
+                      "terms": {
+                          "field": "sh"
                         }
                     }
                 }
             }
         }
+    }
 ```
 
 ##### 3.3.2 不进行分词的聚合
