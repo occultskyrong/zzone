@@ -10,7 +10,27 @@
   
 ##### 3.3.3 查询后聚合
   * [过滤查询以及聚合](http://blog.csdn.net/dm_vincent/article/details/42757519)
-
+```
+body: {
+        "query": {//先查询
+            "filtered": {
+                query: {
+                    "match": {
+                        date: "2016-07-01"
+                    }
+                }
+            }
+        }
+        , "aggs": {//后聚合
+            "user": {
+                "terms": {
+                    "field": "id"
+                    , "size": 10
+                }
+            }
+        }
+    }
+```
 
 ##### 3.3.4 聚合后过滤
   * [Filter Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-filter-aggregation.html)
