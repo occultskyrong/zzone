@@ -34,4 +34,23 @@ body: {
 
 ##### 3.3.4 聚合后过滤
   * [Filter Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-filter-aggregation.html)
-  
+  ```
+  body: {
+        "aggs": {//先聚合
+            "user": {
+                "filter": {//后过滤
+                    "term": {
+                        "date": "2016-07-01"
+                    }
+                }, "aggs": {
+                    "user": {
+                        "terms": {
+                            "field": "id"
+                            , "size": 100
+                        }
+                    }
+                }
+            }
+        }
+    }
+  ```
