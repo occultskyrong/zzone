@@ -13,5 +13,28 @@
 #### 3.4.4 term/terms & match
   * term和match的不同：[elasticsearch 查询（match和term）](http://www.cnblogs.com/yjf512/p/4897294.html)(文章署名叶剑峰（链接http://www.cnblogs.com/yjf512/）)
   * [Range Query(范围查询)](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html)
+  * [elasticsearch match vs term query](http://stackoverflow.com/questions/23150670/elasticsearch-match-vs-term-query)(term和match同时存在)
+```
+"body": {
+        query: {
+            filtered: {
+                query: {
+                    match_phrase: {
+                        ua: "chrome"
+                    }
+                }, filter: {
+                    bool: {
+                        must: {
+                            term: {
+                                date: '2016-07-01'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+```
+  * 
 
 #### 3.4.5 should & must/must_not
