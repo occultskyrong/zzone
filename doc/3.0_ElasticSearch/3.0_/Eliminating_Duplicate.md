@@ -5,6 +5,7 @@
 #### 参考文献
   * [Eliminating Duplicate Documents in Elasticsearch](https://qbox.io/blog/minimizing-document-duplication-in-elasticsearch)
   * [Indexing-time document deduplication](https://discuss.elastic.co/t/indexing-time-document-deduplication/4579)
+  * [Deduplication filter?](https://discuss.elastic.co/t/deduplication-filter/21452)
 
 #### 需求分析
   * 用户登录日志包括列数据：用户编号、登录时间、登录日期、设备(pc/wechat/ios/android)、ip
