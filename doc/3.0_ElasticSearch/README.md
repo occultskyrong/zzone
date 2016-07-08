@@ -2,7 +2,7 @@
 ## 3. ElasticSearch
 
 ### 3.0 [小结](./3.0_)
-
+  * [搜索和搜索建议的实现(pingyin/ik--plugin的应用)](./ik%2Bpinyin.md)
 ### 3.1 [Index&Mapping(索引和映射)](./3.1_Index-Mapping)
 
 ### 3.2 [Analyze(分词)](./3.2_Analyze)
