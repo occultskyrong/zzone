@@ -29,5 +29,5 @@
 
 ### 3.2 思考
 
-#### 3.2.0  [拼音建议和关键词搜索的实现](https://github.com/occultskyrong/zzone/blob/master/doc/3.0_ElasticSearch/ik%2Bpinyin.md)
+#### 3.2.0  [拼音建议和关键词搜索的实现](./doc/3.0_ElasticSearch/3.0_/ik%2Bpinyin.md)
 
