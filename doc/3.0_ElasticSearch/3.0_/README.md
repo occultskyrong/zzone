@@ -7,3 +7,6 @@
 
 ### 搜索的应用
   * [搜索和搜索建议的实现(pingyin/ik--plugin的应用)] (./ik%2Bpinyin.md)
+
+### 日志分析和文档处理
+  * [Eliminating_Duplicate(文档去重)](./Eliminating_Duplicate.md)
