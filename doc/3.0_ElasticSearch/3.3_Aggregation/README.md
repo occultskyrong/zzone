@@ -49,6 +49,29 @@
         }
     }
 ```
+  * 范围过滤后聚合
+```
+"body": {
+        "query": {
+            "filtered": {
+                "filter": {
+                    "range": {
+                        "date": {
+                            "gte": "2016-07-04"
+                        }
+                    }
+                }
+            }
+        }, "aggs": {
+            "ips": {
+                "terms": {
+                    "field": 'sid'
+                    , "size": 0
+                }
+            }
+        }
+    }
+```
 
 ##### 3.3.4 聚合后过滤
   * [Filter Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-filter-aggregation.html)
