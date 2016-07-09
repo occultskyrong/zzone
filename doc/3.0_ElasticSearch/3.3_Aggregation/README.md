@@ -2,6 +2,7 @@
 ### 3.3 Aggregation(聚合)
   
 ##### 3.3.0 请求参数说明
+  * [Terms Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html)
   * [size](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html#_size) 
 
 ##### 3.3.1 多字段数据聚合
