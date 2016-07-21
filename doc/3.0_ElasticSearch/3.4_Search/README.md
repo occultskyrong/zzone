@@ -35,6 +35,35 @@
         }
     }
 ```
+  * 多field的match需要使用bool，see[Multiple Query Strings](https://www.elastic.co/guide/en/elasticsearch/guide/current/multi-query-strings.html)
+```
+{
+        query: {
+            filtered: {
+                query: {
+                    bool: {
+                        must: [{
+                            match_phrase: {
+                                system: 'mall_server'
+                            }
+                        }, {
+                            match: {
+                                message: 'getTime'
+                            }
+                        }]
+                    }
+                }, filter: {
+                    range: {
+                        time: {
+                            gte: '2016-07-20 00:00:00 000'
+                            , lte: '2016-07-20 23:59:59 999'
+                        }
+                    }
+                }
+            }
+        }
+    }
+```
   * 
 
 #### 3.4.5 should & must/must_not
