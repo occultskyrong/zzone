@@ -67,3 +67,7 @@
   * 
 
 #### 3.4.5 should & must/must_not
+
+#### 3.4.6 like/wildcard
+ > 通配符匹配，类似sql的like
+ * [Wildcard Query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-wildcard-query.html)
