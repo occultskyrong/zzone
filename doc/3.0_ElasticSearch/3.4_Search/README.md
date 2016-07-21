@@ -35,7 +35,7 @@
         }
     }
 ```
-  * 多field的match需要使用bool，see[Multiple Query Strings](https://www.elastic.co/guide/en/elasticsearch/guide/current/multi-query-strings.html)
+  * 多field的match需要使用bool，see -- [Multiple Query Strings](https://www.elastic.co/guide/en/elasticsearch/guide/current/multi-query-strings.html)
 ```
 {
         query: {
