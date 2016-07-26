@@ -10,3 +10,5 @@
 ### 3.3 [Aggregation(聚合)](./3.3_Aggregation)
 
 ### 3.4 [Search(搜索)](./3.4_Search)
+
+### 3.10 [pinyin(汉语拼音插件)](./3.10_pinyin)
