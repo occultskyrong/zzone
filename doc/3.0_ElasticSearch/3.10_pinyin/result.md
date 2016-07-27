@@ -1,4 +1,4 @@
-#### 1	tokenizer:keyword	filter:"lowercase"
+#### 1	tokenizer:"keyword"	,filter:"lowercase"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -7,7 +7,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&tex
 ```
 
 ```
-#### 2	tokenizer:keyword	filter:"nGram"
+#### 2	tokenizer:"keyword"	,filter:"nGram"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_n&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -16,7 +16,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_n&tex
 ```
 
 ```
-#### 3	tokenizer:keyword	filter:"standard"
+#### 3	tokenizer:"keyword"	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_s&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -25,7 +25,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_s&tex
 ```
 
 ```
-#### 4	tokenizer:keyword	filter:"lowercase"
+#### 4	tokenizer:"keyword"	,filter:"lowercase"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_ln&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -34,7 +34,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_ln&te
 ```
 
 ```
-#### 5	tokenizer:keyword	filter:"standard"
+#### 5	tokenizer:"keyword"	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sl&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -43,7 +43,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sl&te
 ```
 
 ```
-#### 6	tokenizer:keyword	filter:"standard"
+#### 6	tokenizer:"keyword"	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sn&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -52,7 +52,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sn&te
 ```
 
 ```
-#### 7	tokenizer:keyword	filter:"standard"
+#### 7	tokenizer:"keyword"	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sln&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -61,7 +61,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sln&t
 ```
 
 ```
-#### 8	tokenizer:keyword	filter:{"type":"pinyin","first_letter":"prefix","padding_char":""}
+#### 8	tokenizer:"keyword"	,filter:{"type":"pinyin","first_letter":"prefix","padding_char":""}
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pp&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -70,7 +70,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pp&te
 ```
 
 ```
-#### 9	tokenizer:keyword	filter:{"type":"pinyin","first_letter":"append","padding_char":""}
+#### 9	tokenizer:"keyword"	,filter:{"type":"pinyin","first_letter":"append","padding_char":""}
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pa&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -79,7 +79,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pa&te
 ```
 
 ```
-#### 10	tokenizer:keyword	filter:{"type":"pinyin","first_letter":"only","padding_char":""}
+#### 10	tokenizer:"keyword"	,filter:{"type":"pinyin","first_letter":"only","padding_char":""}
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_po&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -88,7 +88,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_po&te
 ```
 
 ```
-#### 11	tokenizer:keyword	filter:{"type":"pinyin","first_letter":"none","padding_char":""}
+#### 11	tokenizer:"keyword"	,filter:{"type":"pinyin","first_letter":"none","padding_char":""}
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pn&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -97,7 +97,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pn&te
 ```
 
 ```
-#### 12	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	filter:"standard"
+#### 12	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_sn&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -106,7 +106,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_sn&t
 ```
 
 ```
-#### 13	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	filter:"standard"
+#### 13	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_s&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -115,7 +115,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_s&te
 ```
 
 ```
-#### 14	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	filter:"nGram"
+#### 14	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	,filter:"nGram"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_n&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -124,7 +124,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_n&te
 ```
 
 ```
-#### 15	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	filter:"lowercase"
+#### 15	tokenizer:{"type":"pinyin","first_letter":"prefix","padding_char":""}	,filter:"lowercase"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_l&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -133,7 +133,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_l&te
 ```
 
 ```
-#### 16	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	filter:"standard"
+#### 16	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_sn&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -142,7 +142,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_sn&t
 ```
 
 ```
-#### 17	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	filter:"standard"
+#### 17	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	,filter:"standard"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_s&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -151,7 +151,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_s&te
 ```
 
 ```
-#### 18	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	filter:"nGram"
+#### 18	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	,filter:"nGram"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_n&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
@@ -160,7 +160,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_n&te
 ```
 
 ```
-#### 19	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	filter:"lowercase"
+#### 19	tokenizer:{"type":"pinyin","first_letter":"none","padding_char":""}	,filter:"lowercase"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_l&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
