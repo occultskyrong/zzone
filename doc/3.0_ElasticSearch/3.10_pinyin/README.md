@@ -217,8 +217,8 @@ curl -XPUT 'http://192.168.1.101:9200/full_test?pretty' -d '
 ```
 
 #### 实测以上所有analyzer
-	
-	使用字符串'【汉字】MarkDOWN是123*4+5/6中国人民'，进行encodeURI后加入url
+* 使用字符串'【汉字】MarkDOWN是123*4+5/6中国人民'，进行encodeURI后加入url
+* 具体结果参见[result.md](../result.md)
 
 ```
 
