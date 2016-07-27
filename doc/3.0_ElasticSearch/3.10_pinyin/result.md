@@ -17,6 +17,8 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&tex
   } ]
 }
 ```
+  > 不分词，大写改小写，"+"号忽略
+####
 
 ```
 
