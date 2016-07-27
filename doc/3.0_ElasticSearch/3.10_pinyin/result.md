@@ -16,6 +16,10 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&tex
 }
 
 ```
+> 仅将“+”号替换为“ ”(空格)，大写转小写
+
+***
+
 #### 2	tokenizer:"keyword"	,filter:"nGram"
 ```
 
@@ -23,7 +27,10 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_n&tex
 
 ```
 > 结果太多，不在此贴了。
+> 进行了连续两位的分词,"中国人民"分词为“中 中国 国 国人 人 人民 民”
+
 ***
+
 #### 3	tokenizer:"keyword"	,filter:"standard"
 ```
 
