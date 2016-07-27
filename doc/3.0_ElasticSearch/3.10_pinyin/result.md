@@ -1,11 +1,23 @@
+
+#### t:keyword+k:lowercase
+
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
 
 ```
 ```
-
+{
+  "tokens" : [ {
+    "token" : "【汉字】markdown是123*4 5/6中国人民",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  } ]
+}
 ```
+
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_n&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
