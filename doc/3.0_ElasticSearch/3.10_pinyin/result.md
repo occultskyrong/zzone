@@ -16,7 +16,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&tex
 }
 
 ```
-> 仅将“+”号替换为“ ”(空格)，大写转小写
+> 将“+”号替换为“ ”(空格)，大写转小写
 
 ***
 
@@ -26,7 +26,7 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&tex
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_n&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
 
 ```
-> 结果太多，不在此贴了。
+> 结果太多，不在此赘述，自行尝试。
 > 进行了连续两位的分词,"中国人民"分词为“中 中国 国 国人 人 人民 民”
 
 ***
@@ -38,17 +38,31 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_s&tex
 
 ```
 ```
-
+{
+  "tokens" : [ {
+    "token" : "【汉字】MarkDOWN是123*4 5/6中国人民",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  } ]
+}
 ```
+> 仅将“+”号替换为“ ”
+
+***
+
 #### 4	tokenizer:"keyword"	,filter:"lowercase"
 ```
 
 curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_ln&text=%E3%80%90%E6%B1%89%E5%AD%97%E3%80%91MarkDOWN%E6%98%AF123*4+5/6%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91'
 
 ```
-```
+> 结果太多，不在此赘述，自行尝试。
+> 进行了连续两位的分词,"中国人民"分词为“中 中国 国 国人 人 人民 民”，大写转为小写
 
-```
+***
+
 #### 5	tokenizer:"keyword"	,filter:"standard"
 ```
 
