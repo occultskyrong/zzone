@@ -82,9 +82,182 @@ curl -XDELETE 'http://192.168.1.101:9200/full_test?pretty'
 #### 需要将地址改为对应es地址，测试环境的es版本为1.5.0
 ### 测试用例
 
+#### 定义多个分析器
 ```
 curl -XPUT 'http://192.168.1.101:9200/full_test?pretty' -d '
-{
 
+{
+    index: {
+        analysis: {
+            analyzer: {
+                k_l: {
+                    tokenizer: "keyword"
+                    , filter: ["lowercase"]
+                }
+                , k_n: {
+                    tokenizer: "keyword"
+                    , filter: ["nGram"]
+                }
+                , k_s: {
+                    tokenizer: "keyword"
+                    , filter: ["standard"]
+                }
+                , k_ln: {
+                    tokenizer: "keyword"
+                    , filter: ["lowercase", "nGram"]
+                }
+                , k_sl: {
+                    tokenizer: "keyword"
+                    , filter: ["standard", "lowercase"]
+                }
+                , k_sn: {
+                    tokenizer: "keyword"
+                    , filter: ["standard", "nGram"]
+                }
+                , k_sln: {
+                    tokenizer: "keyword"
+                    , filter: ["standard", "lowercase", "nGram"]
+                }
+                , k_pp: {
+                    tokenizer: "keyword"
+                    , filter: ["pp"]
+                }
+                , k_pa: {
+                    tokenizer: "keyword"
+                    , filter: ["pa"]
+                }
+                , k_po: {
+                    tokenizer: "keyword"
+                    , filter: ["po"]
+                }
+                , k_pn: {
+                    tokenizer: "keyword"
+                    , filter: ["pn"]
+                }
+                , pp_sn: {
+                    tokenizer: "pp"
+                    , filter: ["standard", "nGram"]
+                }
+                , pp_s: {
+                    tokenizer: "pp"
+                    , filter: ["standard"]
+                }
+                , pp_n: {
+                    tokenizer: "pp"
+                    , filter: ["nGram"]
+                }
+                , pp_l: {
+                    tokenizer: "pp"
+                    , filter: ["lowercase"]
+                }
+                , pn_sn: {
+                    tokenizer: "pn"
+                    , filter: ["standard", "nGram"]
+                }
+                , pn_s: {
+                    tokenizer: "pn"
+                    , filter: ["standard"]
+                }
+                , pn_n: {
+                    tokenizer: "pn"
+                    , filter: ["nGram"]
+                }
+                , pn_l: {
+                    tokenizer: "pn"
+                    , filter: ["lowercase"]
+                }
+            }
+            , tokenizer: {
+                pp: {
+                    type: "pinyin"
+                    , first_letter: "prefix"
+                    , padding_char: ""
+                }
+                , pa: {
+                    type: "pinyin"
+                    , first_letter: "append"
+                    , padding_char: ""
+                }
+                , po: {
+                    type: "pinyin"
+                    , first_letter: "only"
+                    , padding_char: ""
+                }
+                , pn: {
+                    type: "pinyin"
+                    , first_letter: "none"
+                    , padding_char: ""
+                }
+            }
+            , filter: {
+                pp: {
+                    type: "pinyin"
+                    , first_letter: "prefix"
+                    , padding_char: ""
+                }
+                , pa: {
+                    type: "pinyin"
+                    , first_letter: "append"
+                    , padding_char: ""
+                }
+                , po: {
+                    type: "pinyin"
+                    , first_letter: "only"
+                    , padding_char: ""
+                }
+                , pn: {
+                    type: "pinyin"
+                    , first_letter: "none"
+                    , padding_char: ""
+                }
+            }
+        }
+    }
 }'
 ```
+
+#### 实测以上所有analyzer
+	
+	使用字符串'【6瓶装】五粮醇45度 500ml*6瓶/箱'，进行encodeURI后加入url
+```
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_n&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_s&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_ln&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sl&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sn&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_sln&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pp&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pa&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_po&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_pn&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_sn&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_s&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_n&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pp_l&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_sn&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_s&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_n&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=pn_l&text=%E3%80%906%E7%93%B6%E8%A3%85%E3%80%91%E4%BA%94%E7%B2%AE%E9%86%8745%E5%BA%A6%20500ml*6%E7%93%B6/%E7%AE%B1'
+
+```
+
