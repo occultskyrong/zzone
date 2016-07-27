@@ -6,11 +6,21 @@
 
 ## 非常感谢medcl大神提供的pinyin插件，以下所有的test example均基于该插件编写
 
+#### 建议先查看Elasticsearch中[Analysis此章节中的Docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html)
+
 ### 名词解释
-* [Analysis](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html)          分词、分析
+[Analysis](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html)          分词、分析
 * [Analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html)			分词器
-	* [Standard Analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-analyzer.html)
+ 	* [Standard Analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-analyzer.html) 		标准分词器
+	 	* stopwords 禁用词列表
+	 	* max_token_length **The maximum token length. If a token is seen that exceeds this length then it is split at** max_token_length **intervals. Defaults to 255.** --> 最大词长度（默认为255），超出这个长度，肯定会被切割
+	* [Simple Analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-simple-analyzer.html)
+	* [Whitespace Analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-whitespace-analyzer.html)
+	* [Stop Analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stop-analyzer.html)
 * [Tokenizers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html)        断词
+	* [Standard Tokenizer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html)
+		* max_token_length 同上
+
 
 ### 基本结构
 * copy 自[Analysis](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html#analysis)
@@ -19,13 +29,13 @@
 * 翻译可能不准确或不合理，参见英文文档说明
 
 ```
-index :
+index :		#索引
 	analysis :   #分析模块
         analyzer :			#分词器
             standard :			#标准/默认分词器
-                type : standard
-                stopwords : [stop1, stop2]
-            myAnalyzer1 :
+                type : standard		#type的可选值(standard、simple、whitespace、stop)，即为上文名词解释中Standard Analyzer、Simple Analyzer等等
+                stopwords : [stop1, stop2] #禁用词
+            myAnalyzer1 :		#自定义分词器
                 type : standard
                 stopwords : [stop1, stop2, stop3]
                 max_token_length : 500
