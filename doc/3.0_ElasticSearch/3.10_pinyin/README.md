@@ -77,6 +77,9 @@ curl -XPUT 'http://192.168.1.101:9200/full_test?pretty'
 ```
 curl -XDELETE 'http://192.168.1.101:9200/full_test?pretty'
 ```
+## 业务实现，见[production.md](./production.md)
+* 根据完整测试的结果进行筛选后挑选合适的方案
+
 ## 完整测试
 
 #### 需要将地址改为对应es地址，测试环境的es版本为1.5.0
