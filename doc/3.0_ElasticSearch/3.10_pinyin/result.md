@@ -5,6 +5,15 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_l&tex
 
 ```
 ```
+{
+  "tokens" : [ {
+    "token" : "【汉字】markdown是123*4 5/6中国人民",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  } ]
+}
 
 ```
 #### 2	tokenizer:"keyword"	,filter:"nGram"
@@ -14,7 +23,315 @@ curl -XGET 'http://192.168.1.101:9200/full_test/_analyze?pretty&analyzer=k_n&tex
 
 ```
 ```
-
+{
+  "tokens" : [ {
+    "token" : "【",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "【汉",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "汉",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "汉字",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "字",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "字】",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "】",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "】M",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "M",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "Ma",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "a",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "ar",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "r",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "rk",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "k",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "kD",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "D",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "DO",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "O",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "OW",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "W",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "WN",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "N",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "N是",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "是",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "是1",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "1",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "12",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "2",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "23",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "3",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "3*",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "*",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "*4",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "4",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "4 ",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : " ",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : " 5",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "5",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "5/",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "/",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "/6",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "6",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "6中",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "中",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "中国",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "国",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "国人",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "人",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "人民",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  }, {
+    "token" : "民",
+    "start_offset" : 0,
+    "end_offset" : 26,
+    "type" : "word",
+    "position" : 1
+  } ]
+}
 ```
 #### 3	tokenizer:"keyword"	,filter:"standard"
 ```
