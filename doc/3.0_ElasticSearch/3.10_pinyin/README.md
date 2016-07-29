@@ -2,6 +2,7 @@
 ### Pinyin Analysis for Elasticsearch
 
 > 插件地址:[medcl/elasticsearch-analysis-pinyin](https://github.com/medcl/elasticsearch-analysis-pinyin)
+
 > 插件基于ElasticSearch,v2.3版本docs参见[Elasticsearch Reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
 
 ## 非常感谢medcl大神提供的pinyin插件，以下所有的test example均基于该插件编写
